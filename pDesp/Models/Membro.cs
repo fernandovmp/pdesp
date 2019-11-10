@@ -7,147 +7,121 @@ using System.Data.Sql;
 using System.Data.SqlClient;
 using System.Data;
 
-namespace pDesp
+namespace pDesp.Models
 {
-    class Membro
+    public class Membro
     {
-        private int idMembro;
-        private string nomeMembro;
-        private string papelMembro;
+        public int IdMembro { get; set; }
+        public string NomeMembro { get; set; }
+        public string PapelMembro { get; set; }
 
-        public int IdMembro
-        {
-            get { return idMembro; }
-            set { idMembro = value; }
-        }
-
-        public string NomeMembro
-        {
-            get { return nomeMembro; }
-            set { nomeMembro = value; }
-        }
-
-        public string PapelMembro
-        {
-            get { return papelMembro; }
-            set { papelMembro = value; }
-        }
-
-        public DataTable Listar()
+        public static DataTable Listar(SqlConnection conexao)
         {
             SqlDataAdapter daMembro;
             DataTable dtMembro = new DataTable();
 
             try
             {
-                daMembro = new SqlDataAdapter("SELECT * FROM MEMBRO",
-                    frmDesp.conexao);
-                daMembro.Fill(dtMembro);
-                daMembro.FillSchema(dtMembro, SchemaType.Source);
+                using (daMembro = new SqlDataAdapter("SELECT * FROM MEMBRO",
+                    conexao))
+                {
+                    daMembro.Fill(dtMembro);
+                    daMembro.FillSchema(dtMembro, SchemaType.Source);
+                    return dtMembro;
+                }
             }
             catch(Exception ex)
             {
                 throw ex;
             }
-            return dtMembro;
         }
 
-        public int Salvar()
+        public int Salvar(SqlConnection conexao)
         {
-            int retorno = 0;
-            
             try
             {
-                SqlCommand mycommand;
                 int nReg;
 
-                mycommand = new SqlCommand("INSERT INTO MEMBRO VALUES (@nome_membro, @papel_membro",
-                    frmDesp.conexao);
-
-                mycommand.Parameters.Add(new SqlParameter("@nome_membro", SqlDbType.VarChar));
-                mycommand.Parameters.Add(new SqlParameter("@papel_membro", SqlDbType.VarChar));
-
-                mycommand.Parameters["@nome_membro"].Value = nomeMembro;
-                mycommand.Parameters["@papel_membro"].Value = papelMembro;
-
-                nReg = mycommand.ExecuteNonQuery();
-
-                if(nReg > 0)
+                using (var mycommand = new SqlCommand("INSERT INTO MEMBRO VALUES (@nome_membro, @papel_membro)",
+                    conexao))
                 {
-                    retorno = nReg;
+                    mycommand.Parameters.Add(new SqlParameter("@nome_membro", SqlDbType.VarChar));
+                    mycommand.Parameters.Add(new SqlParameter("@papel_membro", SqlDbType.VarChar));
+
+                    mycommand.Parameters["@nome_membro"].Value = NomeMembro;
+                    mycommand.Parameters["@papel_membro"].Value = PapelMembro;
+
+                    nReg = mycommand.ExecuteNonQuery();
+
+                    if (nReg > 0)
+                    {
+                        return nReg;
+                    }
                 }
             }
             catch(Exception ex)
             {
                 throw ex;
             }
-            return retorno;
+            return 0;
         }
 
-        public int Alterar()
+        public int Alterar(SqlConnection conexao)
         {
-            int retorno = 0;
-
             try
             {
-                SqlCommand mycommand;
                 int nReg = 0;
 
-                mycommand = new SqlCommand("UPDATE MEMBRO SET nome_membro = @nome_membro," +
+                using (var mycommand = new SqlCommand("UPDATE MEMBRO SET nome_membro = @nome_membro," +
                     " papel_membro = @papel_membro" +
-                    " WHERE id_membro = @id_membro", frmDesp.conexao);
-
-                mycommand.Parameters.Add(new SqlParameter("@id_membro", SqlDbType.Int));
-                mycommand.Parameters.Add(new SqlParameter("@nome_membro", SqlDbType.VarChar));
-                mycommand.Parameters.Add(new SqlParameter("@papel_membro", SqlDbType.VarChar));
-
-                mycommand.Parameters["id_membro"].Value = idMembro;
-                mycommand.Parameters["nome_membro"].Value = nomeMembro;
-                mycommand.Parameters["papel_membro"].Value = papelMembro;
-
-                nReg = mycommand.ExecuteNonQuery();
-
-                if (nReg > 0)
+                    " WHERE id_membro = @id_membro", conexao))
                 {
-                    retorno = nReg;
+                    mycommand.Parameters.Add(new SqlParameter("@id_membro", SqlDbType.Int));
+                    mycommand.Parameters.Add(new SqlParameter("@nome_membro", SqlDbType.VarChar));
+                    mycommand.Parameters.Add(new SqlParameter("@papel_membro", SqlDbType.VarChar));
+
+                    mycommand.Parameters["id_membro"].Value = IdMembro;
+                    mycommand.Parameters["nome_membro"].Value = NomeMembro;
+                    mycommand.Parameters["papel_membro"].Value = PapelMembro;
+
+                    nReg = mycommand.ExecuteNonQuery();
+
+                    if (nReg > 0)
+                    {
+                        return nReg;
+                    }
                 }
             }
             catch (Exception ex)
             {
                 throw ex;
             }
-            return retorno;
+            return 0;
         }
 
-        public int Excluir()
+        public int Excluir(SqlConnection conexao)
         {
-            int retorno = 0;
-
             try
             {
-                SqlCommand mycommand;
                 int nReg = 0;
-
-                mycommand = new SqlCommand("DELETE FROM MEMBRO WHERE " +
-                    "id_membro = @id_membro", 
-                    frmDesp.conexao);
-
-                mycommand.Parameters.Add(new SqlParameter("@id_membro", SqlDbType.Int));
-
-                mycommand.Parameters["@id_membro"].Value = idMembro;
-
-                nReg = mycommand.ExecuteNonQuery();
-
-                if (nReg > 0)
+                using (var mycommand = new SqlCommand("DELETE FROM MEMBRO WHERE " + 
+                    "id_membro = @id_membro",
+                    conexao))
                 {
-                    retorno = nReg;
+                    mycommand.Parameters.Add(new SqlParameter("@id_membro", SqlDbType.Int));
+                    mycommand.Parameters["@id_membro"].Value = IdMembro;
+                    nReg = mycommand.ExecuteNonQuery();
+                    if (nReg > 0)
+                    {
+                        return nReg;
+                    }
                 }
             }
             catch (Exception ex)
             {
                 throw ex;
             }
-            return retorno;
+            return 0;
         }
     }
 }
