@@ -45,18 +45,30 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\Despesa.cs" />
-    <Compile Include="Views\Form1.cs">
+    <Compile Include="Program.cs" />
+    <Compile Include="Views\frmDespesa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Views\frmDespesa.Designer.cs">
+      <DependentUpon>frmDespesa.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Membro.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\TipoDespesa.cs" />
-    <EmbeddedResource Include="Views\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Views\frmMembro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmMembro.Designer.cs">
+      <DependentUpon>frmMembro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\frmDespesa.resx">
+      <DependentUpon>frmDespesa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -67,6 +79,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\frmMembro.resx">
+      <DependentUpon>frmMembro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

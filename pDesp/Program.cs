@@ -16,7 +16,7 @@ namespace pDesp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmDesp());
+            Application.Run(new Views.frmPrincipal());
         }
     }
 }
