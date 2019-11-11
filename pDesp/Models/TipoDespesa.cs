@@ -40,7 +40,7 @@ namespace pDesp.Models
             {
                 int nReg;
 
-                using (var mycommand = new SqlCommand("INSERT INTO TIPODESPESA VALUES (@nome_tipodespesa",
+                using (var mycommand = new SqlCommand("INSERT INTO TIPODESPESA VALUES (@nome_tipodespesa)",
                     conexao))
                 {
                     mycommand.Parameters.Add(new SqlParameter("@nome_tipodespesa", SqlDbType.VarChar));
@@ -66,14 +66,14 @@ namespace pDesp.Models
             {
                 int nReg = 0;
 
-                using (var mycommand = new SqlCommand("UPDATE TIPODESPESA SET nome_tipodespesa = @nome_tipodespesa," +
-                    " WHERE id_tipodespesa = @id_tipodespesa", conexao))
+                using (var mycommand = new SqlCommand("UPDATE TIPODESPESA SET NOME_TIPODESPESA = @nome_tipodespesa" +
+                    " WHERE ID_TIPODESPESA = @id_tipodespesa", conexao))
                 {
                     mycommand.Parameters.Add(new SqlParameter("@id_tipodespesa", SqlDbType.Int));
                     mycommand.Parameters.Add(new SqlParameter("@nome_tipodespesa", SqlDbType.VarChar));
 
-                    mycommand.Parameters["id_tipodespesa"].Value = IdTipoDespesa;
-                    mycommand.Parameters["nome_tipodespesa"].Value = NomeTipoDespesa;
+                    mycommand.Parameters["@id_tipodespesa"].Value = IdTipoDespesa;
+                    mycommand.Parameters["@nome_tipodespesa"].Value = NomeTipoDespesa;
 
                     nReg = mycommand.ExecuteNonQuery();
 
@@ -97,7 +97,7 @@ namespace pDesp.Models
                 int nReg = 0;
 
                 using (var mycommand = new SqlCommand("DELETE FROM TIPODESPESA WHERE " +
-                    "id_tipodespesa = @id_tipodespesa",
+                    "ID_TIPODESPESA = @id_tipodespesa",
                     conexao))
                 {
                     mycommand.Parameters.Add(new SqlParameter("@id_tipodespesa", SqlDbType.Int));
