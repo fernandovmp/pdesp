@@ -41,14 +41,15 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.btnNovoRegistro = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.btnExcluir = new System.Windows.Forms.ToolStripButton();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.paginaDados = new System.Windows.Forms.TabPage();
             this.dgvDespesas = new System.Windows.Forms.DataGridView();
             this.paginaDetalhes = new System.Windows.Forms.TabPage();
+            this.lblDataDespesa = new System.Windows.Forms.Label();
+            this.txtDataDespesa = new System.Windows.Forms.TextBox();
             this.txtId = new System.Windows.Forms.TextBox();
             this.lblId = new System.Windows.Forms.Label();
-            this.lblDataDespesa = new System.Windows.Forms.Label();
             this.cbxTipoDespesa = new System.Windows.Forms.ComboBox();
             this.lblTipoDespesa = new System.Windows.Forms.Label();
             this.cbxMembro = new System.Windows.Forms.ComboBox();
@@ -57,7 +58,10 @@
             this.txtValor = new System.Windows.Forms.TextBox();
             this.lblObservacao = new System.Windows.Forms.Label();
             this.txtObservacao = new System.Windows.Forms.TextBox();
-            this.txtDataDespesa = new System.Windows.Forms.TextBox();
+            this.btnSalvar = new System.Windows.Forms.ToolStripButton();
+            this.btnAlterar = new System.Windows.Forms.ToolStripButton();
+            this.btnCancelar = new System.Windows.Forms.ToolStripButton();
+            this.btnSair = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.bnvDespesas)).BeginInit();
             this.bnvDespesas.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -82,7 +86,11 @@
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
             this.btnNovoRegistro,
-            this.bindingNavigatorDeleteItem});
+            this.btnSalvar,
+            this.btnAlterar,
+            this.btnExcluir,
+            this.btnCancelar,
+            this.btnSair});
             this.bnvDespesas.Location = new System.Drawing.Point(0, 0);
             this.bnvDespesas.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bnvDespesas.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -172,14 +180,15 @@
             this.btnNovoRegistro.Text = "Adicionar novo";
             this.btnNovoRegistro.Click += new System.EventHandler(this.btnNovoRegistro_Click);
             // 
-            // bindingNavigatorDeleteItem
+            // btnExcluir
             // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Excluir";
+            this.btnExcluir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluir.Image")));
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.RightToLeftAutoMirrorImage = true;
+            this.btnExcluir.Size = new System.Drawing.Size(23, 22);
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // tabControl1
             // 
@@ -235,6 +244,24 @@
             this.paginaDetalhes.Text = "Detalhes";
             this.paginaDetalhes.UseVisualStyleBackColor = true;
             // 
+            // lblDataDespesa
+            // 
+            this.lblDataDespesa.AutoSize = true;
+            this.lblDataDespesa.Location = new System.Drawing.Point(17, 132);
+            this.lblDataDespesa.Name = "lblDataDespesa";
+            this.lblDataDespesa.Size = new System.Drawing.Size(88, 13);
+            this.lblDataDespesa.TabIndex = 9;
+            this.lblDataDespesa.Text = "Data da despesa";
+            // 
+            // txtDataDespesa
+            // 
+            this.txtDataDespesa.Enabled = false;
+            this.txtDataDespesa.Location = new System.Drawing.Point(8, 144);
+            this.txtDataDespesa.MaxLength = 1000;
+            this.txtDataDespesa.Name = "txtDataDespesa";
+            this.txtDataDespesa.Size = new System.Drawing.Size(173, 20);
+            this.txtDataDespesa.TabIndex = 12;
+            // 
             // txtId
             // 
             this.txtId.Enabled = false;
@@ -252,15 +279,6 @@
             this.lblId.Size = new System.Drawing.Size(18, 13);
             this.lblId.TabIndex = 10;
             this.lblId.Text = "ID";
-            // 
-            // lblDataDespesa
-            // 
-            this.lblDataDespesa.AutoSize = true;
-            this.lblDataDespesa.Location = new System.Drawing.Point(17, 132);
-            this.lblDataDespesa.Name = "lblDataDespesa";
-            this.lblDataDespesa.Size = new System.Drawing.Size(88, 13);
-            this.lblDataDespesa.TabIndex = 9;
-            this.lblDataDespesa.Text = "Data da despesa";
             // 
             // cbxTipoDespesa
             // 
@@ -336,14 +354,45 @@
             this.txtObservacao.Size = new System.Drawing.Size(291, 20);
             this.txtObservacao.TabIndex = 0;
             // 
-            // txtDataDespesa
+            // btnSalvar
             // 
-            this.txtDataDespesa.Enabled = false;
-            this.txtDataDespesa.Location = new System.Drawing.Point(8, 144);
-            this.txtDataDespesa.MaxLength = 1000;
-            this.txtDataDespesa.Name = "txtDataDespesa";
-            this.txtDataDespesa.Size = new System.Drawing.Size(173, 20);
-            this.txtDataDespesa.TabIndex = 12;
+            this.btnSalvar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
+            this.btnSalvar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(23, 22);
+            this.btnSalvar.Text = "Gravar";
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
+            // btnAlterar
+            // 
+            this.btnAlterar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnAlterar.Image = ((System.Drawing.Image)(resources.GetObject("btnAlterar.Image")));
+            this.btnAlterar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(23, 22);
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
+            this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(23, 22);
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnSair
+            // 
+            this.btnSair.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnSair.Image = ((System.Drawing.Image)(resources.GetObject("btnSair.Image")));
+            this.btnSair.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(23, 22);
+            this.btnSair.Text = "Sair";
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // frmDespesa
             // 
@@ -382,7 +431,7 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton btnNovoRegistro;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
+        private System.Windows.Forms.ToolStripButton btnExcluir;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage paginaDados;
         private System.Windows.Forms.TabPage paginaDetalhes;
@@ -399,6 +448,10 @@
         private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.DataGridView dgvDespesas;
         private System.Windows.Forms.TextBox txtDataDespesa;
+        private System.Windows.Forms.ToolStripButton btnSalvar;
+        private System.Windows.Forms.ToolStripButton btnAlterar;
+        private System.Windows.Forms.ToolStripButton btnCancelar;
+        private System.Windows.Forms.ToolStripButton btnSair;
     }
 }
 

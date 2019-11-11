@@ -57,8 +57,8 @@ namespace pDesp.Models
                 string query = "INSERT INTO DESPESA VALUES (@id_tipo_despesa, @id_membro, @data_despesa, @valor_despesa, @obs_despesa)";
                 using (var mycommand = new SqlCommand(query, conexao))
                 {
-                    mycommand.Parameters.Add(new SqlParameter("@id_tipodespesa", SqlDbType.Int));
-                    mycommand.Parameters["@id_tipodespesa"].Value = TipoDespesa.IdTipoDespesa;
+                    mycommand.Parameters.Add(new SqlParameter("@id_tipo_despesa", SqlDbType.Int));
+                    mycommand.Parameters["@id_tipo_despesa"].Value = TipoDespesa.IdTipoDespesa;
                     mycommand.Parameters.Add(new SqlParameter("@id_membro", SqlDbType.Int));
                     mycommand.Parameters["@id_membro"].Value = Membro.IdMembro;
                     mycommand.Parameters.Add(new SqlParameter("@data_despesa", SqlDbType.DateTime));
@@ -100,8 +100,8 @@ namespace pDesp.Models
                 {
                     mycommand.Parameters.Add(new SqlParameter("@id_despesa", SqlDbType.Int));
                     mycommand.Parameters["@id_despesa"].Value = IdDespesa;
-                    mycommand.Parameters.Add(new SqlParameter("@id_tipodespesa", SqlDbType.Int));
-                    mycommand.Parameters["@id_tipodespesa"].Value = TipoDespesa.IdTipoDespesa;
+                    mycommand.Parameters.Add(new SqlParameter("@id_tipo_despesa", SqlDbType.Int));
+                    mycommand.Parameters["@id_tipo_despesa"].Value = TipoDespesa.IdTipoDespesa;
                     mycommand.Parameters.Add(new SqlParameter("@id_membro", SqlDbType.Int));
                     mycommand.Parameters["@id_membro"].Value = Membro.IdMembro;
                     mycommand.Parameters.Add(new SqlParameter("@data_despesa", SqlDbType.DateTime));
