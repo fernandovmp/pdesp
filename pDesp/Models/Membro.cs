@@ -72,17 +72,17 @@ namespace pDesp.Models
             {
                 int nReg = 0;
 
-                using (var mycommand = new SqlCommand("UPDATE MEMBRO SET nome_membro = @nome_membro," +
-                    " papel_membro = @papel_membro" +
-                    " WHERE id_membro = @id_membro", conexao))
+                using (var mycommand = new SqlCommand("UPDATE MEMBRO SET NOME_MEMBRO = @nome_membro," +
+                    " PAPEL_MEMBRO = @papel_membro" +
+                    " WHERE ID_MEMBRO = @id_membro", conexao))
                 {
                     mycommand.Parameters.Add(new SqlParameter("@id_membro", SqlDbType.Int));
                     mycommand.Parameters.Add(new SqlParameter("@nome_membro", SqlDbType.VarChar));
                     mycommand.Parameters.Add(new SqlParameter("@papel_membro", SqlDbType.VarChar));
 
-                    mycommand.Parameters["id_membro"].Value = IdMembro;
-                    mycommand.Parameters["nome_membro"].Value = NomeMembro;
-                    mycommand.Parameters["papel_membro"].Value = PapelMembro;
+                    mycommand.Parameters["@id_membro"].Value = IdMembro;
+                    mycommand.Parameters["@nome_membro"].Value = NomeMembro;
+                    mycommand.Parameters["@papel_membro"].Value = PapelMembro;
 
                     nReg = mycommand.ExecuteNonQuery();
 
@@ -105,7 +105,7 @@ namespace pDesp.Models
             {
                 int nReg = 0;
                 using (var mycommand = new SqlCommand("DELETE FROM MEMBRO WHERE " + 
-                    "id_membro = @id_membro",
+                    "ID_MEMBRO = @id_membro",
                     conexao))
                 {
                     mycommand.Parameters.Add(new SqlParameter("@id_membro", SqlDbType.Int));

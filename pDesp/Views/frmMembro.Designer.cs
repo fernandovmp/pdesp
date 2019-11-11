@@ -34,6 +34,12 @@
             this.paginaDados = new System.Windows.Forms.TabPage();
             this.dgvMembros = new System.Windows.Forms.DataGridView();
             this.paginaDetalhes = new System.Windows.Forms.TabPage();
+            this.txtPapelMembro = new System.Windows.Forms.TextBox();
+            this.lblPapel = new System.Windows.Forms.Label();
+            this.txtNomeMembro = new System.Windows.Forms.TextBox();
+            this.lblNome = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.lblId = new System.Windows.Forms.Label();
             this.bnvMembros = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -45,13 +51,11 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.btnNovoRegistro = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.txtId = new System.Windows.Forms.TextBox();
-            this.lblId = new System.Windows.Forms.Label();
-            this.txtNomeMembro = new System.Windows.Forms.TextBox();
-            this.lblNome = new System.Windows.Forms.Label();
-            this.txtPapelMembro = new System.Windows.Forms.TextBox();
-            this.lblPapel = new System.Windows.Forms.Label();
+            this.btnExcluir = new System.Windows.Forms.ToolStripButton();
+            this.btnSalvar = new System.Windows.Forms.ToolStripButton();
+            this.btnSair = new System.Windows.Forms.ToolStripButton();
+            this.btnAlterar = new System.Windows.Forms.ToolStripButton();
+            this.btnCancelar = new System.Windows.Forms.ToolStripButton();
             this.tabControl1.SuspendLayout();
             this.paginaDados.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMembros)).BeginInit();
@@ -107,6 +111,60 @@
             this.paginaDetalhes.Text = "Detalhes";
             this.paginaDetalhes.UseVisualStyleBackColor = true;
             // 
+            // txtPapelMembro
+            // 
+            this.txtPapelMembro.Enabled = false;
+            this.txtPapelMembro.Location = new System.Drawing.Point(94, 73);
+            this.txtPapelMembro.MaxLength = 10;
+            this.txtPapelMembro.Name = "txtPapelMembro";
+            this.txtPapelMembro.Size = new System.Drawing.Size(173, 20);
+            this.txtPapelMembro.TabIndex = 17;
+            // 
+            // lblPapel
+            // 
+            this.lblPapel.AutoSize = true;
+            this.lblPapel.Location = new System.Drawing.Point(53, 76);
+            this.lblPapel.Name = "lblPapel";
+            this.lblPapel.Size = new System.Drawing.Size(34, 13);
+            this.lblPapel.TabIndex = 16;
+            this.lblPapel.Text = "Papel";
+            // 
+            // txtNomeMembro
+            // 
+            this.txtNomeMembro.Enabled = false;
+            this.txtNomeMembro.Location = new System.Drawing.Point(94, 47);
+            this.txtNomeMembro.MaxLength = 20;
+            this.txtNomeMembro.Name = "txtNomeMembro";
+            this.txtNomeMembro.Size = new System.Drawing.Size(173, 20);
+            this.txtNomeMembro.TabIndex = 15;
+            // 
+            // lblNome
+            // 
+            this.lblNome.AutoSize = true;
+            this.lblNome.Location = new System.Drawing.Point(53, 50);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(35, 13);
+            this.lblNome.TabIndex = 14;
+            this.lblNome.Text = "Nome";
+            // 
+            // txtId
+            // 
+            this.txtId.Enabled = false;
+            this.txtId.Location = new System.Drawing.Point(94, 21);
+            this.txtId.MaxLength = 1000;
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(173, 20);
+            this.txtId.TabIndex = 13;
+            // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Location = new System.Drawing.Point(69, 24);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(18, 13);
+            this.lblId.TabIndex = 12;
+            this.lblId.Text = "ID";
+            // 
             // bnvMembros
             // 
             this.bnvMembros.AddNewItem = null;
@@ -123,7 +181,11 @@
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
             this.btnNovoRegistro,
-            this.bindingNavigatorDeleteItem});
+            this.btnSalvar,
+            this.btnAlterar,
+            this.btnExcluir,
+            this.btnCancelar,
+            this.btnSair});
             this.bnvMembros.Location = new System.Drawing.Point(0, 0);
             this.bnvMembros.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bnvMembros.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -213,68 +275,54 @@
             this.btnNovoRegistro.Text = "Adicionar novo";
             this.btnNovoRegistro.Click += new System.EventHandler(this.btnNovoRegistro_Click);
             // 
-            // bindingNavigatorDeleteItem
+            // btnExcluir
             // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorDeleteItem.Text = "Excluir";
+            this.btnExcluir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluir.Image")));
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.RightToLeftAutoMirrorImage = true;
+            this.btnExcluir.Size = new System.Drawing.Size(23, 22);
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
-            // txtId
+            // btnSalvar
             // 
-            this.txtId.Enabled = false;
-            this.txtId.Location = new System.Drawing.Point(94, 21);
-            this.txtId.MaxLength = 1000;
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(173, 20);
-            this.txtId.TabIndex = 13;
+            this.btnSalvar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
+            this.btnSalvar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(23, 22);
+            this.btnSalvar.Text = "Gravar";
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
-            // lblId
+            // btnSair
             // 
-            this.lblId.AutoSize = true;
-            this.lblId.Location = new System.Drawing.Point(69, 24);
-            this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(18, 13);
-            this.lblId.TabIndex = 12;
-            this.lblId.Text = "ID";
+            this.btnSair.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnSair.Image = ((System.Drawing.Image)(resources.GetObject("btnSair.Image")));
+            this.btnSair.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(23, 22);
+            this.btnSair.Text = "Sair";
             // 
-            // txtNomeMembro
+            // btnAlterar
             // 
-            this.txtNomeMembro.Enabled = false;
-            this.txtNomeMembro.Location = new System.Drawing.Point(94, 47);
-            this.txtNomeMembro.MaxLength = 20;
-            this.txtNomeMembro.Name = "txtNomeMembro";
-            this.txtNomeMembro.Size = new System.Drawing.Size(173, 20);
-            this.txtNomeMembro.TabIndex = 15;
+            this.btnAlterar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnAlterar.Image = ((System.Drawing.Image)(resources.GetObject("btnAlterar.Image")));
+            this.btnAlterar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(23, 22);
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
-            // lblNome
+            // btnCancelar
             // 
-            this.lblNome.AutoSize = true;
-            this.lblNome.Location = new System.Drawing.Point(53, 50);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(35, 13);
-            this.lblNome.TabIndex = 14;
-            this.lblNome.Text = "Nome";
-            // 
-            // txtPapelMembro
-            // 
-            this.txtPapelMembro.Enabled = false;
-            this.txtPapelMembro.Location = new System.Drawing.Point(94, 73);
-            this.txtPapelMembro.MaxLength = 10;
-            this.txtPapelMembro.Name = "txtPapelMembro";
-            this.txtPapelMembro.Size = new System.Drawing.Size(173, 20);
-            this.txtPapelMembro.TabIndex = 17;
-            // 
-            // lblPapel
-            // 
-            this.lblPapel.AutoSize = true;
-            this.lblPapel.Location = new System.Drawing.Point(53, 76);
-            this.lblPapel.Name = "lblPapel";
-            this.lblPapel.Size = new System.Drawing.Size(34, 13);
-            this.lblPapel.TabIndex = 16;
-            this.lblPapel.Text = "Papel";
+            this.btnCancelar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
+            this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(23, 22);
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // frmMembro
             // 
@@ -308,7 +356,7 @@
         private System.Windows.Forms.BindingNavigator bnvMembros;
         private System.Windows.Forms.ToolStripButton btnNovoRegistro;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
+        private System.Windows.Forms.ToolStripButton btnExcluir;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
@@ -323,5 +371,9 @@
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label lblId;
+        private System.Windows.Forms.ToolStripButton btnSalvar;
+        private System.Windows.Forms.ToolStripButton btnAlterar;
+        private System.Windows.Forms.ToolStripButton btnCancelar;
+        private System.Windows.Forms.ToolStripButton btnSair;
     }
 }
