@@ -164,9 +164,9 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(182, 271);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(186, 13);
+            this.label10.Size = new System.Drawing.Size(188, 13);
             this.label10.TabIndex = 12;
-            this.label10.Text = "ilustrssíma Professora Denilce Veloso.";
+            this.label10.Text = "ilustríssima Professora Denilce Veloso.";
             // 
             // label11
             // 
@@ -196,8 +196,9 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmSobre";
-            this.Text = "frmSobre";
+            this.Text = "Sobre";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
