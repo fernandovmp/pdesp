@@ -29,179 +29,179 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSobre));
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.picFern = new System.Windows.Forms.PictureBox();
+            this.picGust = new System.Windows.Forms.PictureBox();
+            this.picCaio = new System.Windows.Forms.PictureBox();
+            this.lblNome1 = new System.Windows.Forms.Label();
+            this.lblNome2 = new System.Windows.Forms.Label();
+            this.lblNome3 = new System.Windows.Forms.Label();
+            this.lblGit1 = new System.Windows.Forms.Label();
+            this.lblGit2 = new System.Windows.Forms.Label();
+            this.lblGit3 = new System.Windows.Forms.Label();
+            this.lblNatalJP = new System.Windows.Forms.Label();
+            this.lblMsg1 = new System.Windows.Forms.Label();
+            this.lblMsg2 = new System.Windows.Forms.Label();
+            this.lblMsg3 = new System.Windows.Forms.Label();
+            this.lblFinal = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.picFern)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picGust)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCaio)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox2
+            // picFern
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(197, 38);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(128, 123);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            this.picFern.Image = ((System.Drawing.Image)(resources.GetObject("picFern.Image")));
+            this.picFern.Location = new System.Drawing.Point(197, 38);
+            this.picFern.Name = "picFern";
+            this.picFern.Size = new System.Drawing.Size(128, 123);
+            this.picFern.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picFern.TabIndex = 1;
+            this.picFern.TabStop = false;
             // 
-            // pictureBox1
+            // picGust
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(365, 38);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(128, 123);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.picGust.Image = ((System.Drawing.Image)(resources.GetObject("picGust.Image")));
+            this.picGust.Location = new System.Drawing.Point(365, 38);
+            this.picGust.Name = "picGust";
+            this.picGust.Size = new System.Drawing.Size(128, 123);
+            this.picGust.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picGust.TabIndex = 0;
+            this.picGust.TabStop = false;
             // 
-            // pictureBox3
+            // picCaio
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(25, 38);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(128, 123);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
+            this.picCaio.Image = ((System.Drawing.Image)(resources.GetObject("picCaio.Image")));
+            this.picCaio.Location = new System.Drawing.Point(25, 38);
+            this.picCaio.Name = "picCaio";
+            this.picCaio.Size = new System.Drawing.Size(128, 123);
+            this.picCaio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picCaio.TabIndex = 2;
+            this.picCaio.TabStop = false;
             // 
-            // label1
+            // lblNome1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 177);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Caio Matheus de Proença";
+            this.lblNome1.AutoSize = true;
+            this.lblNome1.Location = new System.Drawing.Point(24, 177);
+            this.lblNome1.Name = "lblNome1";
+            this.lblNome1.Size = new System.Drawing.Size(130, 13);
+            this.lblNome1.TabIndex = 3;
+            this.lblNome1.Text = "Caio Matheus de Proença";
             // 
-            // label2
+            // lblNome2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(204, 177);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Fernando Vinicius M.P";
+            this.lblNome2.AutoSize = true;
+            this.lblNome2.Location = new System.Drawing.Point(204, 177);
+            this.lblNome2.Name = "lblNome2";
+            this.lblNome2.Size = new System.Drawing.Size(113, 13);
+            this.lblNome2.TabIndex = 4;
+            this.lblNome2.Text = "Fernando Vinicius M.P";
             // 
-            // label3
+            // lblNome3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(374, 177);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Gustavo Tassi Souza";
+            this.lblNome3.AutoSize = true;
+            this.lblNome3.Location = new System.Drawing.Point(374, 177);
+            this.lblNome3.Name = "lblNome3";
+            this.lblNome3.Size = new System.Drawing.Size(108, 13);
+            this.lblNome3.TabIndex = 5;
+            this.lblNome3.Text = "Gustavo Tassi Souza";
             // 
-            // label4
+            // lblGit1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(56, 199);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "git: cmpvrau";
+            this.lblGit1.AutoSize = true;
+            this.lblGit1.Location = new System.Drawing.Point(56, 199);
+            this.lblGit1.Name = "lblGit1";
+            this.lblGit1.Size = new System.Drawing.Size(65, 13);
+            this.lblGit1.TabIndex = 6;
+            this.lblGit1.Text = "git: cmpvrau";
             // 
-            // label5
+            // lblGit2
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(220, 199);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 13);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "git: fernandovmp";
+            this.lblGit2.AutoSize = true;
+            this.lblGit2.Location = new System.Drawing.Point(220, 199);
+            this.lblGit2.Name = "lblGit2";
+            this.lblGit2.Size = new System.Drawing.Size(86, 13);
+            this.lblGit2.TabIndex = 7;
+            this.lblGit2.Text = "git: fernandovmp";
             // 
-            // label6
+            // lblGit3
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(388, 199);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(83, 13);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "git: gustavotassi";
+            this.lblGit3.AutoSize = true;
+            this.lblGit3.Location = new System.Drawing.Point(388, 199);
+            this.lblGit3.Name = "lblGit3";
+            this.lblGit3.Size = new System.Drawing.Size(83, 13);
+            this.lblGit3.TabIndex = 8;
+            this.lblGit3.Text = "git: gustavotassi";
             // 
-            // label7
+            // lblNatalJP
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(-2, 323);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(319, 13);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "\"Hashire sori yo, kaze no you ni tsukimihara wo, padoru padoru~!\"";
+            this.lblNatalJP.AutoSize = true;
+            this.lblNatalJP.Location = new System.Drawing.Point(-2, 323);
+            this.lblNatalJP.Name = "lblNatalJP";
+            this.lblNatalJP.Size = new System.Drawing.Size(319, 13);
+            this.lblNatalJP.TabIndex = 9;
+            this.lblNatalJP.Text = "\"Hashire sori yo, kaze no you ni tsukimihara wo, padoru padoru~!\"";
             // 
-            // label8
+            // lblMsg1
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(113, 245);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(299, 13);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "Este trabalho tem por finalidade demonstrar os conhecimentos";
+            this.lblMsg1.AutoSize = true;
+            this.lblMsg1.Location = new System.Drawing.Point(113, 245);
+            this.lblMsg1.Name = "lblMsg1";
+            this.lblMsg1.Size = new System.Drawing.Size(299, 13);
+            this.lblMsg1.TabIndex = 10;
+            this.lblMsg1.Text = "Este trabalho tem por finalidade demonstrar os conhecimentos";
             // 
-            // label9
+            // lblMsg2
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(113, 258);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(296, 13);
-            this.label9.TabIndex = 11;
-            this.label9.Text = "obtidos durante o semestre na matéria de LP2 ministrada pela";
+            this.lblMsg2.AutoSize = true;
+            this.lblMsg2.Location = new System.Drawing.Point(113, 258);
+            this.lblMsg2.Name = "lblMsg2";
+            this.lblMsg2.Size = new System.Drawing.Size(296, 13);
+            this.lblMsg2.TabIndex = 11;
+            this.lblMsg2.Text = "obtidos durante o semestre na matéria de LP2 ministrada pela";
             // 
-            // label10
+            // lblMsg3
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(182, 271);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(188, 13);
-            this.label10.TabIndex = 12;
-            this.label10.Text = "ilustríssima Professora Denilce Veloso.";
+            this.lblMsg3.AutoSize = true;
+            this.lblMsg3.Location = new System.Drawing.Point(182, 271);
+            this.lblMsg3.Name = "lblMsg3";
+            this.lblMsg3.Size = new System.Drawing.Size(188, 13);
+            this.lblMsg3.TabIndex = 12;
+            this.lblMsg3.Text = "ilustríssima Professora Denilce Veloso.";
             // 
-            // label11
+            // lblFinal
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(56, 296);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(164, 13);
-            this.label11.TabIndex = 13;
-            this.label11.Text = "Obrigado por tudo, e boas festas!";
+            this.lblFinal.AutoSize = true;
+            this.lblFinal.Location = new System.Drawing.Point(56, 296);
+            this.lblFinal.Name = "lblFinal";
+            this.lblFinal.Size = new System.Drawing.Size(164, 13);
+            this.lblFinal.TabIndex = 13;
+            this.lblFinal.Text = "Obrigado por tudo, e boas festas!";
             // 
             // frmSobre
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(523, 335);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.lblFinal);
+            this.Controls.Add(this.lblMsg3);
+            this.Controls.Add(this.lblMsg2);
+            this.Controls.Add(this.lblMsg1);
+            this.Controls.Add(this.lblNatalJP);
+            this.Controls.Add(this.lblGit3);
+            this.Controls.Add(this.lblGit2);
+            this.Controls.Add(this.lblGit1);
+            this.Controls.Add(this.lblNome3);
+            this.Controls.Add(this.lblNome2);
+            this.Controls.Add(this.lblNome1);
+            this.Controls.Add(this.picCaio);
+            this.Controls.Add(this.picFern);
+            this.Controls.Add(this.picGust);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmSobre";
             this.Text = "Sobre";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picFern)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picGust)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCaio)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,19 +209,19 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.PictureBox picGust;
+        private System.Windows.Forms.PictureBox picFern;
+        private System.Windows.Forms.PictureBox picCaio;
+        private System.Windows.Forms.Label lblNome1;
+        private System.Windows.Forms.Label lblNome2;
+        private System.Windows.Forms.Label lblNome3;
+        private System.Windows.Forms.Label lblGit1;
+        private System.Windows.Forms.Label lblGit2;
+        private System.Windows.Forms.Label lblGit3;
+        private System.Windows.Forms.Label lblNatalJP;
+        private System.Windows.Forms.Label lblMsg1;
+        private System.Windows.Forms.Label lblMsg2;
+        private System.Windows.Forms.Label lblMsg3;
+        private System.Windows.Forms.Label lblFinal;
     }
 }

@@ -84,7 +84,11 @@ namespace pDesp.Views
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            if (txtNomeTipoDespesa.Text == "") return;
+            if (txtNomeTipoDespesa.Text == "")
+            {
+                MessageBox.Show("Preencha todos os campos");
+                return;
+            }
 
             var tipoDespesa = new TipoDespesa
             {

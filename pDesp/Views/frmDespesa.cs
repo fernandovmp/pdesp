@@ -135,8 +135,11 @@ namespace pDesp.Views
                 !double.TryParse(txtValor.Text, out d) ||
                 txtObservacao.Text == "" ||
                 !DateTime.TryParse(txtDataDespesa.Text, out date) ||
-                d >= 1000000000) 
+                d >= 1000000000)
+            {
+                MessageBox.Show("Preencha todos os campos");
                 return;
+            }
 
             var despesa = new Despesa
             {

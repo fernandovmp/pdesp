@@ -87,7 +87,11 @@ namespace pDesp.Views
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            if (txtNomeMembro.Text == "" || txtPapelMembro.Text == "") return;
+            if (txtNomeMembro.Text == "" || txtPapelMembro.Text == "")
+            {
+                MessageBox.Show("Preencha todos os campos");
+                return;
+            } 
 
             var membro = new Membro
             {
@@ -164,6 +168,16 @@ namespace pDesp.Views
 
                 MessageBox.Show("Erro ao excluir membro!");
                 
+            }
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            DialogResult escolha = MessageBox.Show("Deseja sair?", "Tipo Despesa", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (escolha.ToString() == "Yes")
+            {
+                Close();
             }
         }
     }

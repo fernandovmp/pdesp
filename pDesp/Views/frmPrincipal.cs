@@ -13,8 +13,8 @@ namespace pDesp.Views
 {
     public partial class frmPrincipal : Form
     {
-        public const string STRING_CONEXAO = "Data Source=Apolo;Initial Catalog=LP2;User ID=BD1911005;Password=cmpVrau22";
-        //public const string STRING_CONEXAO = "Data Source=ZERO\\SQLEXPRESS;Initial Catalog=LP2;Integrated Security=True";
+        //public const string STRING_CONEXAO = "Data Source=Apolo;Initial Catalog=LP2;User ID=BD1911005;Password=cmpVrau22";
+        public const string STRING_CONEXAO = "Data Source=ZERO\\SQLEXPRESS;Initial Catalog=LP2;Integrated Security=True";
         public static SqlConnection Conexao { get; private set; }
 
         public frmPrincipal()
