@@ -102,14 +102,11 @@ namespace pDesp.Views
             txtObservacao.Enabled = true;
             cbxMembro.Enabled = true;
             cbxTipoDespesa.Enabled = true;
-            if(adicao && comboboxEhVazio)
+            if(adicao && !comboboxEhVazio)
             {
                 cbxMembro.SelectedIndex = 0;
                 cbxTipoDespesa.SelectedIndex = 0;
             }
-            // 9, 2
-            // 1000000000,00
-            // 11111111111
             txtDataDespesa.Enabled = true;
             txtValor.Focus();
             btnSalvar.Enabled = true;
@@ -137,13 +134,14 @@ namespace pDesp.Views
             if (txtValor.Text == "" || 
                 !double.TryParse(txtValor.Text, out d) ||
                 txtObservacao.Text == "" ||
-                !DateTime.TryParse(txtDataDespesa.Text, out date)) 
+                !DateTime.TryParse(txtDataDespesa.Text, out date) ||
+                d >= 1000000000) 
                 return;
 
             var despesa = new Despesa
             {
                 IdDespesa = int.Parse(txtId.Text),
-                ValorDespesa = double.Parse(txtValor.Text),
+                ValorDespesa = Math.Round(double.Parse(txtValor.Text), 2),
                 ObservacaoDespesa = txtObservacao.Text,
                 DataDespesa = DateTime.Parse(txtDataDespesa.Text),
                 Membro = new Membro
