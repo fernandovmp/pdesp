@@ -56,7 +56,15 @@ namespace pDesp.Views
             comboboxEhVazio = membros.Rows.Count == 0 || tipoDespesas.Rows.Count == 0;
             if(comboboxEhVazio)
             {
-                MessageBox.Show("Vazio");
+                if(membros.Rows.Count == 0)
+                {
+                    MessageBox.Show("Cadastre um membro da família antes");
+                }
+                if (tipoDespesas.Rows.Count == 0)
+                {
+                    MessageBox.Show("Cadastre um Tipo de despesa antes");
+                }
+                Close();
             }
         }
 
