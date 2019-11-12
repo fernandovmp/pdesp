@@ -140,7 +140,7 @@ namespace pDesp.Views
             {
                 tabControl1.SelectTab(1);
             }
-            if (MessageBox.Show("Confirma exclusão?", "Yes or No",
+            if (MessageBox.Show("Confirma exclusão?", "Exclusão",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2)
                 == DialogResult.Yes)
             {
