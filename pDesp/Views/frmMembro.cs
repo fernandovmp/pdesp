@@ -32,9 +32,9 @@ namespace pDesp.Views
             dgvMembros.DataSource = bnMembro;
             bnvMembros.BindingSource = bnMembro;
 
-            txtId.DataBindings.Add(nameof(txtId.Text), bnMembro, "ID_MEMBRO");
-            txtNomeMembro.DataBindings.Add(nameof(txtNomeMembro.Text), bnMembro, "NOME_MEMBRO");
-            txtPapelMembro.DataBindings.Add(nameof(txtPapelMembro.Text), bnMembro, "PAPEL_MEMBRO");
+            txtId.DataBindings.Add("Text", bnMembro, "ID_MEMBRO");
+            txtNomeMembro.DataBindings.Add("Text", bnMembro, "NOME_MEMBRO");
+            txtPapelMembro.DataBindings.Add("Text", bnMembro, "PAPEL_MEMBRO");
         }
 
         private void AtualizarTabela()

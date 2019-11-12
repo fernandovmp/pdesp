@@ -32,8 +32,8 @@ namespace pDesp.Views
             dgvTipoDespesa.DataSource = bnTipoDespesa;
             bnvTipoDespesa.BindingSource = bnTipoDespesa;
 
-            txtId.DataBindings.Add(nameof(txtId.Text), bnTipoDespesa, "ID_TIPODESPESA");
-            txtNomeTipoDespesa.DataBindings.Add(nameof(txtNomeTipoDespesa.Text), bnTipoDespesa, "NOME_TIPODESPESA");
+            txtId.DataBindings.Add("Text", bnTipoDespesa, "ID_TIPODESPESA");
+            txtNomeTipoDespesa.DataBindings.Add("Text", bnTipoDespesa, "NOME_TIPODESPESA");
         }
 
         private void AtualizarTabela()

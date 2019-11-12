@@ -33,20 +33,20 @@ namespace pDesp.Views
             dgvDespesas.DataSource = bnDespesa;
             bnvDespesas.BindingSource = bnDespesa;
 
-            txtId.DataBindings.Add(nameof(txtId.Text), bnDespesa, "ID_DESPESA");
-            txtObservacao.DataBindings.Add(nameof(txtObservacao.Text), bnDespesa, "OBS_DESPESA");
-            txtValor.DataBindings.Add(nameof(txtValor.Text), bnDespesa, "VALOR_DESPESA");
-            txtDataDespesa.DataBindings.Add(nameof(txtDataDespesa.Text), bnDespesa, "DATA_DESPESA");
+            txtId.DataBindings.Add("Text", bnDespesa, "ID_DESPESA");
+            txtObservacao.DataBindings.Add("Text", bnDespesa, "OBS_DESPESA");
+            txtValor.DataBindings.Add("Text", bnDespesa, "VALOR_DESPESA");
+            txtDataDespesa.DataBindings.Add("Text", bnDespesa, "DATA_DESPESA");
             
             cbxMembro.DataSource = Membro.Listar(conexao);
             cbxMembro.DisplayMember = "NOME_MEMBRO";
             cbxMembro.ValueMember = "ID_MEMBRO";
-            cbxMembro.DataBindings.Add(nameof(cbxMembro.SelectedValue), bnDespesa, "ID_MEMBRO");
+            cbxMembro.DataBindings.Add("SelectedValue", bnDespesa, "ID_MEMBRO");
 
             cbxTipoDespesa.DataSource = TipoDespesa.Listar(conexao);
             cbxTipoDespesa.DisplayMember = "NOME_TIPODESPESA";
             cbxTipoDespesa.ValueMember = "ID_TIPODESPESA";
-            cbxTipoDespesa.DataBindings.Add(nameof(cbxTipoDespesa.SelectedValue), bnDespesa, "ID_TIPODESPESA");
+            cbxTipoDespesa.DataBindings.Add("SelectedValue", bnDespesa, "ID_TIPODESPESA");
             
         }
 
