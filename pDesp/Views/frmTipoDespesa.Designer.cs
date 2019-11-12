@@ -69,7 +69,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 28);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(489, 271);
+            this.tabControl1.Size = new System.Drawing.Size(800, 271);
             this.tabControl1.TabIndex = 0;
             // 
             // paginaDados
@@ -78,7 +78,7 @@
             this.paginaDados.Location = new System.Drawing.Point(4, 22);
             this.paginaDados.Name = "paginaDados";
             this.paginaDados.Padding = new System.Windows.Forms.Padding(3);
-            this.paginaDados.Size = new System.Drawing.Size(481, 245);
+            this.paginaDados.Size = new System.Drawing.Size(792, 245);
             this.paginaDados.TabIndex = 0;
             this.paginaDados.Text = "Dados";
             this.paginaDados.UseVisualStyleBackColor = true;
@@ -90,7 +90,7 @@
             this.dgvTipoDespesa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTipoDespesa.Location = new System.Drawing.Point(0, 0);
             this.dgvTipoDespesa.Name = "dgvTipoDespesa";
-            this.dgvTipoDespesa.Size = new System.Drawing.Size(481, 249);
+            this.dgvTipoDespesa.Size = new System.Drawing.Size(792, 245);
             this.dgvTipoDespesa.TabIndex = 0;
             // 
             // paginaDetalhes
@@ -102,7 +102,7 @@
             this.paginaDetalhes.Location = new System.Drawing.Point(4, 22);
             this.paginaDetalhes.Name = "paginaDetalhes";
             this.paginaDetalhes.Padding = new System.Windows.Forms.Padding(3);
-            this.paginaDetalhes.Size = new System.Drawing.Size(481, 245);
+            this.paginaDetalhes.Size = new System.Drawing.Size(792, 245);
             this.paginaDetalhes.TabIndex = 1;
             this.paginaDetalhes.Text = "Detalhes";
             this.paginaDetalhes.UseVisualStyleBackColor = true;
@@ -110,16 +110,16 @@
             // txtNomeTipoDespesa
             // 
             this.txtNomeTipoDespesa.Enabled = false;
-            this.txtNomeTipoDespesa.Location = new System.Drawing.Point(94, 47);
+            this.txtNomeTipoDespesa.Location = new System.Drawing.Point(68, 37);
             this.txtNomeTipoDespesa.MaxLength = 20;
             this.txtNomeTipoDespesa.Name = "txtNomeTipoDespesa";
-            this.txtNomeTipoDespesa.Size = new System.Drawing.Size(173, 20);
+            this.txtNomeTipoDespesa.Size = new System.Drawing.Size(239, 20);
             this.txtNomeTipoDespesa.TabIndex = 15;
             // 
             // lblNome
             // 
             this.lblNome.AutoSize = true;
-            this.lblNome.Location = new System.Drawing.Point(53, 50);
+            this.lblNome.Location = new System.Drawing.Point(27, 40);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(35, 13);
             this.lblNome.TabIndex = 14;
@@ -128,16 +128,16 @@
             // txtId
             // 
             this.txtId.Enabled = false;
-            this.txtId.Location = new System.Drawing.Point(94, 21);
+            this.txtId.Location = new System.Drawing.Point(69, 9);
             this.txtId.MaxLength = 1000;
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(173, 20);
+            this.txtId.Size = new System.Drawing.Size(239, 20);
             this.txtId.TabIndex = 13;
             // 
             // lblId
             // 
             this.lblId.AutoSize = true;
-            this.lblId.Location = new System.Drawing.Point(69, 24);
+            this.lblId.Location = new System.Drawing.Point(44, 12);
             this.lblId.Name = "lblId";
             this.lblId.Size = new System.Drawing.Size(18, 13);
             this.lblId.TabIndex = 12;
@@ -178,8 +178,8 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
-            this.bindingNavigatorCountItem.Text = "de {0}";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
             // 
             // bindingNavigatorMoveFirstItem
@@ -209,7 +209,6 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Posição";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -307,9 +306,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 300);
             this.Controls.Add(this.bnvTipoDespesa);
             this.Controls.Add(this.tabControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(816, 338);
+            this.MinimumSize = new System.Drawing.Size(816, 338);
             this.Name = "frmTipoDespesa";
             this.Text = "Cadastrar - Tipo de despesa";
             this.Load += new System.EventHandler(this.frmMembro_Load);

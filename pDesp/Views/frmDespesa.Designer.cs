@@ -41,7 +41,11 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.btnNovoRegistro = new System.Windows.Forms.ToolStripButton();
+            this.btnSalvar = new System.Windows.Forms.ToolStripButton();
+            this.btnAlterar = new System.Windows.Forms.ToolStripButton();
             this.btnExcluir = new System.Windows.Forms.ToolStripButton();
+            this.btnCancelar = new System.Windows.Forms.ToolStripButton();
+            this.btnSair = new System.Windows.Forms.ToolStripButton();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.paginaDados = new System.Windows.Forms.TabPage();
             this.dgvDespesas = new System.Windows.Forms.DataGridView();
@@ -58,10 +62,6 @@
             this.txtValor = new System.Windows.Forms.TextBox();
             this.lblObservacao = new System.Windows.Forms.Label();
             this.txtObservacao = new System.Windows.Forms.TextBox();
-            this.btnSalvar = new System.Windows.Forms.ToolStripButton();
-            this.btnAlterar = new System.Windows.Forms.ToolStripButton();
-            this.btnCancelar = new System.Windows.Forms.ToolStripButton();
-            this.btnSair = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.bnvDespesas)).BeginInit();
             this.bnvDespesas.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -73,6 +73,7 @@
             // bnvDespesas
             // 
             this.bnvDespesas.AddNewItem = null;
+            this.bnvDespesas.BackColor = System.Drawing.SystemColors.Control;
             this.bnvDespesas.CountItem = this.bindingNavigatorCountItem;
             this.bnvDespesas.DeleteItem = null;
             this.bnvDespesas.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -105,8 +106,8 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
-            this.bindingNavigatorCountItem.Text = "de {0}";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
             // 
             // bindingNavigatorMoveFirstItem
@@ -136,7 +137,6 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Posição";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -180,6 +180,26 @@
             this.btnNovoRegistro.Text = "Adicionar novo";
             this.btnNovoRegistro.Click += new System.EventHandler(this.btnNovoRegistro_Click);
             // 
+            // btnSalvar
+            // 
+            this.btnSalvar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
+            this.btnSalvar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(23, 22);
+            this.btnSalvar.Text = "Gravar";
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
+            // btnAlterar
+            // 
+            this.btnAlterar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnAlterar.Image = ((System.Drawing.Image)(resources.GetObject("btnAlterar.Image")));
+            this.btnAlterar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(23, 22);
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
+            // 
             // btnExcluir
             // 
             this.btnExcluir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -189,6 +209,26 @@
             this.btnExcluir.Size = new System.Drawing.Size(23, 22);
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
+            this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(23, 22);
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnSair
+            // 
+            this.btnSair.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnSair.Image = ((System.Drawing.Image)(resources.GetObject("btnSair.Image")));
+            this.btnSair.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(23, 22);
+            this.btnSair.Text = "Sair";
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // tabControl1
             // 
@@ -224,6 +264,7 @@
             // 
             // paginaDetalhes
             // 
+            this.paginaDetalhes.BackColor = System.Drawing.Color.Transparent;
             this.paginaDetalhes.Controls.Add(this.lblDataDespesa);
             this.paginaDetalhes.Controls.Add(this.txtDataDespesa);
             this.paginaDetalhes.Controls.Add(this.txtId);
@@ -242,7 +283,6 @@
             this.paginaDetalhes.Size = new System.Drawing.Size(792, 245);
             this.paginaDetalhes.TabIndex = 1;
             this.paginaDetalhes.Text = "Detalhes";
-            this.paginaDetalhes.UseVisualStyleBackColor = true;
             // 
             // lblDataDespesa
             // 
@@ -265,16 +305,16 @@
             // txtId
             // 
             this.txtId.Enabled = false;
-            this.txtId.Location = new System.Drawing.Point(60, 9);
+            this.txtId.Location = new System.Drawing.Point(69, 9);
             this.txtId.MaxLength = 1000;
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(173, 20);
+            this.txtId.Size = new System.Drawing.Size(239, 20);
             this.txtId.TabIndex = 11;
             // 
             // lblId
             // 
             this.lblId.AutoSize = true;
-            this.lblId.Location = new System.Drawing.Point(35, 12);
+            this.lblId.Location = new System.Drawing.Point(44, 12);
             this.lblId.Name = "lblId";
             this.lblId.Size = new System.Drawing.Size(18, 13);
             this.lblId.TabIndex = 10;
@@ -304,7 +344,7 @@
             this.cbxMembro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxMembro.Enabled = false;
             this.cbxMembro.FormattingEnabled = true;
-            this.cbxMembro.Location = new System.Drawing.Point(60, 37);
+            this.cbxMembro.Location = new System.Drawing.Point(69, 37);
             this.cbxMembro.Name = "cbxMembro";
             this.cbxMembro.Size = new System.Drawing.Size(239, 21);
             this.cbxMembro.TabIndex = 5;
@@ -312,7 +352,7 @@
             // lblMembro
             // 
             this.lblMembro.AutoSize = true;
-            this.lblMembro.Location = new System.Drawing.Point(8, 40);
+            this.lblMembro.Location = new System.Drawing.Point(17, 40);
             this.lblMembro.Name = "lblMembro";
             this.lblMembro.Size = new System.Drawing.Size(45, 13);
             this.lblMembro.TabIndex = 4;
@@ -321,7 +361,7 @@
             // lblValor
             // 
             this.lblValor.AutoSize = true;
-            this.lblValor.Location = new System.Drawing.Point(17, 66);
+            this.lblValor.Location = new System.Drawing.Point(17, 78);
             this.lblValor.Name = "lblValor";
             this.lblValor.Size = new System.Drawing.Size(89, 13);
             this.lblValor.TabIndex = 3;
@@ -330,7 +370,7 @@
             // txtValor
             // 
             this.txtValor.Enabled = false;
-            this.txtValor.Location = new System.Drawing.Point(8, 78);
+            this.txtValor.Location = new System.Drawing.Point(8, 90);
             this.txtValor.MaxLength = 1000;
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(173, 20);
@@ -339,7 +379,7 @@
             // lblObservacao
             // 
             this.lblObservacao.AutoSize = true;
-            this.lblObservacao.Location = new System.Drawing.Point(208, 66);
+            this.lblObservacao.Location = new System.Drawing.Point(17, 186);
             this.lblObservacao.Name = "lblObservacao";
             this.lblObservacao.Size = new System.Drawing.Size(65, 13);
             this.lblObservacao.TabIndex = 1;
@@ -348,60 +388,23 @@
             // txtObservacao
             // 
             this.txtObservacao.Enabled = false;
-            this.txtObservacao.Location = new System.Drawing.Point(199, 78);
+            this.txtObservacao.Location = new System.Drawing.Point(8, 198);
             this.txtObservacao.MaxLength = 50;
             this.txtObservacao.Name = "txtObservacao";
             this.txtObservacao.Size = new System.Drawing.Size(291, 20);
             this.txtObservacao.TabIndex = 0;
             // 
-            // btnSalvar
-            // 
-            this.btnSalvar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnSalvar.Image = ((System.Drawing.Image)(resources.GetObject("btnSalvar.Image")));
-            this.btnSalvar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(23, 22);
-            this.btnSalvar.Text = "Gravar";
-            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
-            // 
-            // btnAlterar
-            // 
-            this.btnAlterar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnAlterar.Image = ((System.Drawing.Image)(resources.GetObject("btnAlterar.Image")));
-            this.btnAlterar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(23, 22);
-            this.btnAlterar.Text = "Alterar";
-            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
-            this.btnCancelar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(23, 22);
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnSair
-            // 
-            this.btnSair.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btnSair.Image = ((System.Drawing.Image)(resources.GetObject("btnSair.Image")));
-            this.btnSair.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(23, 22);
-            this.btnSair.Text = "Sair";
-            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
-            // 
             // frmDespesa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 300);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.bnvDespesas);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(816, 338);
+            this.MinimumSize = new System.Drawing.Size(816, 338);
             this.Name = "frmDespesa";
             this.Text = "Despesas";
             this.Load += new System.EventHandler(this.frmDespesa_Load);
