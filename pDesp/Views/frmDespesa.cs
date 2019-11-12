@@ -19,6 +19,7 @@ namespace pDesp.Views
         private readonly DataSet dsDespesa = new DataSet();
         private readonly BindingSource bnDespesa = new BindingSource();
         private bool bInclusao;
+        private bool comboboxEhVazio;
 
         public frmDespesa(SqlConnection conexaoBd)
         {
@@ -38,16 +39,33 @@ namespace pDesp.Views
             txtValor.DataBindings.Add("Text", bnDespesa, "VALOR_DESPESA");
             txtDataDespesa.DataBindings.Add("Text", bnDespesa, "DATA_DESPESA");
             
-            cbxMembro.DataSource = Membro.Listar(conexao);
+            DataTable membros = Membro.Listar(conexao);
+
+            cbxMembro.DataSource = membros;
             cbxMembro.DisplayMember = "NOME_MEMBRO";
             cbxMembro.ValueMember = "ID_MEMBRO";
             cbxMembro.DataBindings.Add("SelectedValue", bnDespesa, "ID_MEMBRO");
 
-            cbxTipoDespesa.DataSource = TipoDespesa.Listar(conexao);
+            DataTable tipoDespesas = TipoDespesa.Listar(conexao);
+
+            cbxTipoDespesa.DataSource = tipoDespesas;
             cbxTipoDespesa.DisplayMember = "NOME_TIPODESPESA";
             cbxTipoDespesa.ValueMember = "ID_TIPODESPESA";
             cbxTipoDespesa.DataBindings.Add("SelectedValue", bnDespesa, "ID_TIPODESPESA");
-            
+
+            comboboxEhVazio = membros.Rows.Count == 0 || tipoDespesas.Rows.Count == 0;
+            if(comboboxEhVazio)
+            {
+                if(membros.Rows.Count == 0)
+                {
+                    MessageBox.Show("Cadastre um membro da família antes");
+                }
+                if (tipoDespesas.Rows.Count == 0)
+                {
+                    MessageBox.Show("Cadastre um Tipo de despesa antes");
+                }
+                Close();
+            }
         }
 
         private void AtualizarTabela()
@@ -84,11 +102,14 @@ namespace pDesp.Views
             txtObservacao.Enabled = true;
             cbxMembro.Enabled = true;
             cbxTipoDespesa.Enabled = true;
-            if(adicao)
+            if(adicao && comboboxEhVazio)
             {
                 cbxMembro.SelectedIndex = 0;
                 cbxTipoDespesa.SelectedIndex = 0;
             }
+            // 9, 2
+            // 1000000000,00
+            // 11111111111
             txtDataDespesa.Enabled = true;
             txtValor.Focus();
             btnSalvar.Enabled = true;
