@@ -58,7 +58,9 @@
     <Compile Include="Views\frmSobre.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\frmSobre.Designer.cs" />
+    <Compile Include="Views\frmSobre.Designer.cs">
+      <DependentUpon>frmSobre.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\frmTipoDespesa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,7 +91,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Views\frmSobre.resx" />
+    <EmbeddedResource Include="Views\frmSobre.resx">
+      <DependentUpon>frmSobre.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\frmTipoDespesa.resx">
       <DependentUpon>frmTipoDespesa.cs</DependentUpon>
     </EmbeddedResource>
